@@ -284,7 +284,7 @@ function start_horror()
 	npc2state = {}
 
 	local h = level.get_time_hours()
-	if (h >= 22 and h <= 2)
+	if (h >= 22 or h <= 2)  --(h >= 22 and h <= 2) всегда FALSE
 		and math.random() <= horror_prob
 	then
 		Actor:give_info_portion("horror")
